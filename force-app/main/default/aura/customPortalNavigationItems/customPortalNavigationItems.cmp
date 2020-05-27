@@ -1,0 +1,10 @@
+<aura:component access="global" extends="forceCommunity:navigationMenuBase"  implements="forceCommunity:availableForAllPageTypes">
+ 
+    <aura:attribute name="menuItems" type="Object[]" />
+
+    <c:customPortalNavigation 
+        defaultItems="{!v.menuItems}" 
+        onnavigate="{!c.navigate}"
+	></c:customPortalNavigation>
+
+</aura:component>

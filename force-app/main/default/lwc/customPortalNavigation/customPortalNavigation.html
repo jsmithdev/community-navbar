@@ -1,0 +1,50 @@
+<template>
+    
+    <ul class="slds-tabs_default__nav" role="tablist">
+        <template
+            for:each={items}
+            for:item="item">
+        
+            <template if:true={item.active}>
+                <li 
+                    key={item.key}
+                    class="slds-tabs_default__item slds-is-active" 
+                    title={item.label} 
+                    role="presentation">
+    
+                    <a 
+                        class="slds-tabs_default__link" 
+                        role="tab" 
+                        tabindex="0" 
+                        name={item.id}
+                        onclick={navigate}
+                        aria-selected="true" 
+                        aria-controls="tab-default-1">
+                        {item.label}
+                    </a>
+                </li>
+            </template>
+        
+            <template if:false={item.active}>
+                <li 
+                    key={item.key}
+                    class="slds-tabs_default__item" 
+                    title="Item One" 
+                    role="presentation">
+    
+                    <a 
+                        class="slds-tabs_default__link" 
+                        role="tab" 
+                        tabindex="0" 
+                        name={item.id}
+                        onclick={navigate}
+                        aria-selected="true" 
+                        aria-controls="tab-default-1">
+                        {item.label}
+                    </a>
+                </li>
+            </template>
+
+        </template>
+    </ul>
+</template>

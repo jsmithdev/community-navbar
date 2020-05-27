@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Used to dynamically give setup community navigation items to the LWC named Custom Community Navigation</description>
+</AuraDefinitionBundle>
